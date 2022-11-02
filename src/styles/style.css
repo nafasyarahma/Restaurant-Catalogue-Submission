@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lexend Deca';
+  }
+  
+  p, a, li, button {
+    font-family: 'Poppins';
+
+}
+
+/* SKIP LINK*/
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background-color: #F2A510;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+  
+.skip-link:focus {
+    top: 0;
+}
+  
+
+/* APP BAR */
+
+.app-bar {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    border-bottom: 0.25px solid;
+    border-color: rgb(207, 207, 207);
+    z-index: 99;
+}
+
+.app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+}
+
+.app-bar img {
+    width: 140px;
+}
+
+.app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.app-bar .app-bar__navigation.open {
+    left: 0;
+    margin-top: 22px;
+}
+
+.app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    min-height: 44px;
+    padding: 12px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+/* JUMBOTRON */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.7)url("heros/hero-image-small.jpg");
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+  
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+  
+.hero__title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 44px;
+}
+  
+.hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+  
+.hero button:hover{
+    background-color: #F2A510;
+    color: black;
+    border-color: #F2A510;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+    padding: 40px 60px;
+    flex: 1;
+}
+
+/* CONTENT */
+.content {
+    margin: 0 auto;
+    min-height: 100%;
+}
+   
+.content .content__heading {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* RESTAURANT */
+ 
+.restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 40px 0;
+}
+
+
+/* RESTAURANT ITEM */
+ 
+.restaurant-item {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.25px solid;
+    border-color: rgb(207, 207, 207);
+}
+   
+.restaurant-item__header {
+    position: relative;
+    padding: 16px;
+}
+   
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.restaurant-item .restaurant-item__content {
+    padding: 0 16px 16px 16px;
+}
+
+.restaurant-item  .restaurant-item__content__header {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.restaurant-item  .restaurant-item__content__header .restaurant-item__header__rating{
+    text-align: right;
+}
+
+.restaurant-item .restaurant-item__content__city {
+    margin: 4px 0 16px 0;
+}
+
+.restaurant-item .restaurant-item__content__description {
+    color:rgb(148, 148, 148);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+   
+.restaurant-item .restaurant-item__content h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+   
+.restaurant-item .restaurant-item__content h3 a {
+    font-family: 'Lexend Deca';
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+    padding: 10px 0;
+}
+   
+
+/* RESTAURANT */
+
+.restaurant {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.restaurant .restaurant__review__title {
+    font-size: 20px;
+    padding: 32px 0;
+}
+
+.restaurant .restaurant__header {
+    padding: 0 40px 40px 40px;
+    font-size: 20px;
+}
+   
+.restaurant .restaurant__poster {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.restaurant .restaurant__info {
+    padding: 24px 40px;
+    border-bottom: 0.5px solid;
+    border-color:  rgb(207, 207, 207);
+}
+
+.restaurant .restaurant__info h4 {
+    margin: 20px 0 8px 0;
+    font-size: 20px;
+}
+
+.restaurant .restaurant__info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.restaurant .restaurant__info ul {
+    margin-left: 40px;
+}
+
+.restaurant .restaurant__review {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+    row-gap: 12px;
+}
+
+.restaurant .restaurant__review .review-item {
+    padding: 20px;
+}
+
+.restaurant .restaurant__review .review-item .review-item__header #reviewerName{
+    font-weight: 600;
+}
+
+.restaurant .restaurant__review .review-item .review-item__header #reviewDate{
+    font-style: italic;
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 8px;
+}
+
+
+/* LIKE */
+
+.like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2A510;
+    
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+   
+
+/* FOOTER */
+
+.app-footer {
+    background-color: #F2A510;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lexend Deca';
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* ICON */
+
+.fa-star{
+    color: #F2A510;
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.fa-circle-user {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: rgb(90, 90, 90);
+}
+

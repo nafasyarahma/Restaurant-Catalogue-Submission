@@ -1,0 +1,100 @@
+@media screen and (max-width: 400px) {
+  .restaurant-item  .restaurant-item__content__header {
+    display: block;
+  }
+
+  .restaurant-item  .restaurant-item__content__header .restaurant-item__header__rating{
+    margin: 8px 0;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 650px) { 
+  .hero {
+    background: rgba(0,0,0,0.7)url("heros/hero-image-large.jpg");
+    min-height: 460px;
+    width: 100%;
+    background-size: cover;
+  } 
+  
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+  
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+  
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .app-bar a:hover {
+    color: #F2A510;
+    border-bottom: 2px solid;
+    border-color: #F2A510;
+    color: #F2A510;
+  }
+  
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .restaurant {
+    grid-template-columns: auto 1fr;
+  }
+  
+  .restaurant .restaurant__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .restaurant .restaurant__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .restaurant .restaurant__review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 12px;
+  }
+}
+   
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
+   
+@media screen and (min-width: 850px) {
+  .restaurants {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+   
+@media screen and (min-width: 1200px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+   
+@media screen and (min-width: 1600px) {
+  .restaurants {
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
